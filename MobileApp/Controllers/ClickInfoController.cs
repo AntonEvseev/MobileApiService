@@ -21,7 +21,7 @@ namespace MobileApp.Controllers
             db.ClickInfoes.Add(ci);
             db.SaveChanges();
             ci = db.ClickInfoes.ToList().Last();
-            return Ok(ci.DateClick);
+            return Ok(ci.DateClick.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }
